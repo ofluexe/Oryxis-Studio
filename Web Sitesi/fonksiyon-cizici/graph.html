@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonksiyon Çizici</title>
+    <link rel="stylesheet" href="graph.css">
+</head>
+<body>
+    <div class="main-content">
+        <div class="left">
+            <h1>📈 Fonksiyon Çizici</h1>
+            <p>Fonksiyon formatı: <code>2*x</code>, <code>x+3</code>, <code>x^2</code> vb.</p>
+            <p>Not: Çarpma işareti eksikse (ör: 2x), otomatik olarak tamamlanır.</p>
+            <div class="controls">
+                <input type="text" id="functionInput" placeholder="Örnek: 2*x veya x^2">
+                <button class="primary" onclick="addFunction()">Fonksiyonu Ekle ve Çiz</button>
+            </div>
+            <div class="controls">
+                <button onclick="zoomIn()">➕ Yakınlaştır</button>
+                <button onclick="zoomOut()">➖ Uzaklaştır</button>
+                <button onclick="saveGraph()">💾 Grafiği Kaydet</button>
+            </div>
+            <canvas id="graph" width="600" height="400"></canvas>
+            <ul id="pointList">
+                <h2>Noktalar</h2>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 Oryxis Studio | Tasarım: Yasin Enes Topçu </p>
+    </footer>
+    <script src="graph.js"></script>
+</body>
+</html>
